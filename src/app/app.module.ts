@@ -1,14 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
-// import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { JobListsService } from './jobs-list.service';
+import { JobListsComponent } from './job-lists/job-lists.component';
+
+
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -93,16 +95,17 @@ export class DemoMaterialModule {}
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JobListsComponent
   ],
   imports: [
     BrowserModule,
     DemoMaterialModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [JobListsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
