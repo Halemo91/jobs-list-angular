@@ -1,10 +1,23 @@
+.container{
+  margin-bottom: 25px;
+}
+.container label{
+    font-weight: bold;
+        padding-right: 10px;
+}
 .highlight{
   background: grey;
 }
 .textCenter{
       text-align: center;
 }
-/* .mat-expansion-panel,
+.tableWidth{
+  width: 100%;
+}
+.mat-expansion-panel,
 .mat-expansion-panel-header {
-  background: grey;
-} */
+  background: #ebf0f4;
+}
+.mat-list{
+border-radius: 15px;
+}

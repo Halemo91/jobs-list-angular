@@ -23,6 +23,7 @@ export class JobListsService{
     // // )
     // // .catch(err => {return "no data";});
     //  }
+    //get data from json file
     getJobsList(){
      return this.http.get('../assets/data/jobs.json')
     .catch(err => {return "no data";});
