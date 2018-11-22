@@ -7,5 +7,5 @@ import { JobListsComponent } from './job-lists/job-lists.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = "jobs-app";
+  title = "Job Lists App";
 }
