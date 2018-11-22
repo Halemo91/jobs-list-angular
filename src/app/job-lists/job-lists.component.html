@@ -9,7 +9,7 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
 
-       <table  mat-table [dataSource]="dataSource" class="mat-elevation-z8 tableWidth">
+       <table  mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 tableWidth">
         <!-- ID Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef class="textCenter"> ID </th>

@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {MatTableDataSource,MatExpansionModule} from '@angular/material';
+import {MatTableDataSource,MatExpansionModule,MatTableModule} from '@angular/material';
 import { JobListsService } from '../jobs-list.service';
 import { JobListsComponent } from './job-lists.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -11,7 +11,7 @@ describe('Component: jobLists', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MatExpansionModule
+        MatTableDataSource,MatExpansionModule,MatTableModule
       ],    schemas: [
         CUSTOM_ELEMENTS_SCHEMA
     ],
