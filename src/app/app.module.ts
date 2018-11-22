@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppComponent } from './app.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {ScrollingModule} from '@angular/cdk/scrolling';
@@ -105,6 +105,7 @@ export class DemoMaterialModule {}
     HttpClientModule
 
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [JobListsService],
   bootstrap: [AppComponent]
 })

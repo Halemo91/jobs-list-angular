@@ -2,8 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import {MatTableDataSource,MatExpansionModule} from '@angular/material';
 import { JobListsService } from '../jobs-list.service';
 import { JobListsComponent } from './job-lists.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-describe('JobListsComponent', () => {
+describe('Component: jobLists', () => {
   let component: JobListsComponent;
   let fixture: ComponentFixture<JobListsComponent>;
 
@@ -11,7 +12,9 @@ describe('JobListsComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         MatExpansionModule
-      ],
+      ],    schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ],
       declarations: [ JobListsComponent ],
       providers: [JobListsService]
     })
