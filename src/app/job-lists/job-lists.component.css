@@ -5,6 +5,9 @@
     font-weight: bold;
         padding-right: 10px;
 }
+.container p{
+    margin-top: 0px;
+}
 .highlight{
   background: grey;
 }
@@ -20,4 +23,7 @@
 }
 .mat-list{
 border-radius: 15px;
+}
+.flexDisplay{
+  display: flex;
 }

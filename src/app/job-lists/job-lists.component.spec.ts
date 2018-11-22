@@ -1,14 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {MatTableDataSource,MatExpansionModule} from '@angular/material';
+import { JobListsService } from '../jobs-list.service';
 import { JobListsComponent } from './job-lists.component';
 
-xdescribe('JobListsComponent', () => {
+describe('JobListsComponent', () => {
   let component: JobListsComponent;
   let fixture: ComponentFixture<JobListsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ JobListsComponent ]
+      imports: [
+        MatExpansionModule
+      ],
+      declarations: [ JobListsComponent ],
+      providers: [JobListsService]
     })
     .compileComponents();
   }));
@@ -19,7 +24,7 @@ xdescribe('JobListsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  xit('should create', () => {
     expect(component).toBeTruthy();
   });
 });

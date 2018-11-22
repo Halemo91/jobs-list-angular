@@ -19,10 +19,10 @@ export class JobListsComponent implements OnInit {
   constructor(private _jobService: JobListsService){ }
 
   ngOnInit(){
+    // Calling service to get the job list data
      this._jobService.getJobsList()
      .subscribe(
         data => {
-          console.log(data,data["body"])
               if(data && data["body"] && data["body"].length >0){
                   //filtering active jobs
                   this.ELEMENT_DATA = _.filter(data["body"], (item) => {
@@ -36,6 +36,7 @@ export class JobListsComponent implements OnInit {
           }
         );
   }
+  //this function for getting the data of clicked row
   itemDetails(row){
      this.rowDetails = row;
      this.expandPanel = true;
